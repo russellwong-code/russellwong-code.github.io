@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Sticky Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">VolunteerConnect</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">My Profile</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <div class="bg-white shadow rounded-lg p-6">
+      <div class="flex flex-col md:flex-row md:justify-between items-center mb-6">
+        <div>
+          <h2 class="text-2xl font-bold mb-1">Welcome, Jane Doe</h2>
+          <p class="text-gray-600">Active Volunteer since 2022</p>
+        </div>
+        <button class="mt-4 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Download Resume</button>
+      </div>
+
+      <!-- Metrics Summary -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-blue-100 p-4 rounded">
+          <p class="text-sm text-gray-600">Service Hours</p>
+          <p class="text-2xl font-bold">128</p>
+        </div>
+        <div class="bg-green-100 p-4 rounded">
+          <p class="text-sm text-gray-600">Learning Hours</p>
+          <p class="text-2xl font-bold">42</p>
+        </div>
+        <div class="bg-yellow-100 p-4 rounded">
+          <p class="text-sm text-gray-600">Completed Events</p>
+          <p class="text-2xl font-bold">15</p>
+        </div>
+      </div>
+
+      <!-- Volunteering History -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Volunteering History</h3>
+        <ul class="space-y-4">
+          <li class="bg-gray-100 p-4 rounded">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Food Distribution with HopeMeals</p>
+                <p class="text-sm text-gray-600">Apr 2025 • 6 hours</p>
+              </div>
+              <span class="text-green-600 font-semibold">Completed</span>
+            </div>
+          </li>
+          <li class="bg-gray-100 p-4 rounded">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Tutoring at YouthSpark</p>
+                <p class="text-sm text-gray-600">Mar 2025 • 8 hours</p>
+              </div>
+              <span class="text-green-600 font-semibold">Completed</span>
+            </div>
+          </li>
+          <li class="bg-gray-100 p-4 rounded">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold">Community Clean-Up with GreenSG</p>
+                <p class="text-sm text-gray-600">Feb 2025 • 4 hours</p>
+              </div>
+              <span class="text-green-600 font-semibold">Completed</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-4 text-sm text-gray-600">
+    &copy; 2025 VolunteerConnect. All rights reserved.
+  </footer>
+</body>
+</html>
