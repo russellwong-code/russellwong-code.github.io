@@ -11,10 +11,13 @@
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">VolunteerConnect</h1>
-      <div class="space-x-6">
-        <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500">My Profile</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a>
+      <button class="md:hidden block text-gray-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <div id="mobile-menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row md:items-center md:static absolute top-16 left-0 w-full bg-white md:bg-transparent md:w-auto md:shadow-none shadow-md z-40">
+        <a href="index.html" class="block px-4 py-2 md:py-0 text-gray-700 hover:text-blue-500">Home</a>
+        <a href="#" class="block px-4 py-2 md:py-0 text-gray-700 hover:text-blue-500">My Profile</a>
+        <a href="#contact" class="block px-4 py-2 md:py-0 text-gray-700 hover:text-blue-500">Contact</a>
       </div>
     </div>
   </nav>
@@ -22,16 +25,16 @@
   <!-- Profile Section -->
   <section class="py-16 px-4 max-w-4xl mx-auto">
     <div class="bg-white shadow rounded-lg p-6">
-      <div class="flex flex-col md:flex-row md:justify-between items-center mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0">
         <div>
           <h2 class="text-2xl font-bold mb-1">Welcome, Jane Doe</h2>
           <p class="text-gray-600">Active Volunteer since 2022</p>
         </div>
-        <button class="mt-4 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Download Resume</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full md:w-auto">Download Resume</button>
       </div>
 
       <!-- Metrics Summary -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
         <div class="bg-blue-100 p-4 rounded">
           <p class="text-sm text-gray-600">Service Hours</p>
           <p class="text-2xl font-bold">128</p>
@@ -51,7 +54,7 @@
         <h3 class="text-xl font-semibold mb-4">Volunteering History</h3>
         <ul class="space-y-4">
           <li class="bg-gray-100 p-4 rounded">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center flex-wrap gap-2">
               <div>
                 <p class="font-semibold">Food Distribution with HopeMeals</p>
                 <p class="text-sm text-gray-600">Apr 2025 • 6 hours</p>
@@ -60,7 +63,7 @@
             </div>
           </li>
           <li class="bg-gray-100 p-4 rounded">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center flex-wrap gap-2">
               <div>
                 <p class="font-semibold">Tutoring at YouthSpark</p>
                 <p class="text-sm text-gray-600">Mar 2025 • 8 hours</p>
@@ -69,7 +72,7 @@
             </div>
           </li>
           <li class="bg-gray-100 p-4 rounded">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center flex-wrap gap-2">
               <div>
                 <p class="font-semibold">Community Clean-Up with GreenSG</p>
                 <p class="text-sm text-gray-600">Feb 2025 • 4 hours</p>
