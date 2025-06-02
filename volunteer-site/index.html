@@ -3,109 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VolunteerConnect</title>
+  <title>VolunteerConnect - Home</title>
+  <script defer>
+    // Mobile navbar toggle script
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    });
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Sticky Navbar -->
-  <nav class="bg-white shadow sticky top-0 z-50">
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white border-b shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">VolunteerConnect</h1>
-      <div class="space-x-6">
-        <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
-        <a href="profile.html" class="text-gray-700 hover:text-blue-500">My Profile</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a>
-      </div>
+      <h1 class="text-xl font-bold text-blue-600">VolunteerConnect</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#opportunities" class="text-gray-700 hover:text-blue-600">Opportunities</a>
+        <a href="profile.html" class="text-gray-700 hover:text-blue-600">My Profile</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+      <!-- Hamburger -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
-  </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="#opportunities" class="block py-2 text-gray-700 hover:text-blue-600">Opportunities</a>
+      <a href="profile.html" class="block py-2 text-gray-700 hover:text-blue-600">My Profile</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+    </div>
+  </header>
 
   <!-- Hero Section -->
-  <section class="bg-blue-100 py-20">
-    <div class="max-w-7xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-4">Find Meaningful Volunteering Opportunities</h2>
-      <p class="mb-6 text-lg">Connect with social agencies and make an impact in your community.</p>
-      <a href="#opportunities" class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600">Explore Opportunities</a>
-    </div>
+  <section class="bg-blue-50 py-16 text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-blue-700 mb-4">Make a Difference</h2>
+    <p class="text-lg text-gray-700 mb-6">Join meaningful volunteer work with leading social agencies.</p>
+    <a href="#opportunities"
+       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">
+      Explore Opportunities
+    </a>
   </section>
 
-  <!-- Opportunities Listing -->
-  <section id="opportunities" class="py-16 px-4 max-w-7xl mx-auto">
-    <h3 class="text-2xl font-bold mb-6">Volunteering Opportunities</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">Elderly Outreach</h4>
-        <p class="text-gray-600 mb-4">Join our program to bring companionship to the elderly.</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Apply Now</button>
+  <!-- Opportunities List -->
+  <section id="opportunities" class="py-12 px-6 max-w-6xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 text-center">Available Opportunities</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Example Opportunity -->
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-md transition">
+        <h4 class="font-semibold text-lg mb-2">Food Bank Assistant</h4>
+        <p class="text-gray-600 mb-2">Agency: Care4All</p>
+        <p class="text-sm text-gray-500 mb-4">Help sort and distribute food to families in need every Saturday.</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Apply</button>
       </div>
-      <!-- Card 2 -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">Food Distribution</h4>
-        <p class="text-gray-600 mb-4">Help distribute meals to underprivileged families.</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Apply Now</button>
+      <!-- Duplicate above card for more placeholders -->
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-md transition">
+        <h4 class="font-semibold text-lg mb-2">Mentor Youths</h4>
+        <p class="text-gray-600 mb-2">Agency: BrightFutures</p>
+        <p class="text-sm text-gray-500 mb-4">Be a mentor to at-risk youths and guide them through weekly activities.</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Apply</button>
       </div>
-      <!-- Card 3 -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">Literacy Program</h4>
-        <p class="text-gray-600 mb-4">Support children with reading and learning activities.</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Apply Now</button>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-md transition">
+        <h4 class="font-semibold text-lg mb-2">Elderly Befriender</h4>
+        <p class="text-gray-600 mb-2">Agency: SilverCare</p>
+        <p class="text-sm text-gray-500 mb-4">Visit and accompany elderly residents in care homes during weekends.</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Apply</button>
       </div>
     </div>
   </section>
 
   <!-- Pricing Table -->
-  <section class="bg-gray-100 py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-8">Agency Plans</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="font-semibold text-lg mb-2">Basic</h4>
-          <p class="text-3xl font-bold mb-4">Free</p>
-          <ul class="text-left text-sm mb-4">
-            <li>- Post 3 opportunities</li>
-            <li>- Access to volunteer profiles</li>
-          </ul>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Get Started</button>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow border-2 border-blue-500">
-          <h4 class="font-semibold text-lg mb-2">Standard</h4>
-          <p class="text-3xl font-bold mb-4">$49/mo</p>
-          <ul class="text-left text-sm mb-4">
-            <li>- Post unlimited opportunities</li>
-            <li>- Volunteer analytics</li>
-            <li>- Priority support</li>
-          </ul>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Choose Plan</button>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h4 class="font-semibold text-lg mb-2">Premium</h4>
-          <p class="text-3xl font-bold mb-4">$99/mo</p>
-          <ul class="text-left text-sm mb-4">
-            <li>- All Standard features</li>
-            <li>- Custom reporting</li>
-            <li>- Dedicated account manager</li>
-          </ul>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Choose Plan</button>
-        </div>
+  <section class="bg-gray-100 py-12 px-6">
+    <h3 class="text-2xl font-bold text-center mb-6">Agency Plans</h3>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold text-xl mb-2">Basic</h4>
+        <p class="text-gray-600 mb-4">Free listing of up to 3 opportunities</p>
+        <p class="text-3xl font-bold mb-4">$0</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Get Started</button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow border-2 border-blue-600">
+        <h4 class="font-semibold text-xl mb-2">Pro</h4>
+        <p class="text-gray-600 mb-4">Unlimited listings + analytics</p>
+        <p class="text-3xl font-bold mb-4">$49/mo</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Upgrade</button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold text-xl mb-2">Enterprise</h4>
+        <p class="text-gray-600 mb-4">Custom onboarding for agencies</p>
+        <p class="text-3xl font-bold mb-4">Contact Us</p>
+        <button class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Talk to Sales</button>
       </div>
     </div>
   </section>
 
   <!-- Contact Form -->
-  <section id="contact" class="py-16 px-4 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <h3 class="text-2xl font-bold text-center mb-6">Contact Us</h3>
-      <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded" />
-        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded" />
-        <textarea placeholder="Your Message" class="w-full px-4 py-2 border rounded"></textarea>
-        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send</button>
-      </form>
-    </div>
+  <section id="contact" class="py-12 px-6 max-w-3xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 text-center">Contact Us</h3>
+    <form class="space-y-4 bg-white p-6 rounded-lg shadow">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded" />
+      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded" />
+      <textarea placeholder="Your Message" class="w-full p-3 border rounded h-32"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-200 text-center py-4 text-sm text-gray-600">
+  <footer class="bg-gray-50 text-center text-sm text-gray-500 py-6">
     &copy; 2025 VolunteerConnect. All rights reserved.
   </footer>
 </body>
